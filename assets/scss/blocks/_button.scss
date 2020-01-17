@@ -2,18 +2,23 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: 0.3s ease;
+  @include transition-default;
   cursor: pointer;
 
   &_menu {
     color: #ffffff;
-    background: $colorMain;
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0)
+      ),
+      #d24a43;
     text-transform: uppercase;
     font-style: normal;
-    border-radius: 4px;
-    padding: 10px 35px;
-    @include resize(font-size, 19, 16);
-    max-width: 150px;
+    border-radius: vw(4px);
+    padding: vw(10px) vw(35px);
+    font-size: vw(19px);
+    max-width: vw(150px);
     white-space: nowrap;
 
     &:hover {

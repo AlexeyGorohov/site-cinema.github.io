@@ -1,20 +1,20 @@
 .time-card {
   box-shadow: 0px 1px 8px rgba($colorBlack, 0.15);
   background-color: $colorMain;
-  border-radius: 15px;
+  border-radius: vw(15px);
   display: inline-flex;
 
   &__wrap {
     cursor: pointer;
     transform: translateY(2px);
-    border-radius: 15px;
+    border-radius: vw(15px);
     line-height: 1.18;
-    @include resize(padding-top, 12, 5);
-    @include resize(padding-bottom, 12, 5);
-    @include resize(padding-right, 12, 10);
-    @include resize(padding-left, 15, 10);
-    @include resize(width, 100, 75);
-    @include resize(height, 100, 75);
+    padding-top: vw(12px);
+    padding-bottom: vw(12px);
+    padding-right: 2px;
+    padding-left: 5px;
+    width: vw(100px);
+    height: vw(100px);
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -22,13 +22,13 @@
   }
 
   &__time {
-    @include resize(font-size, 24, 18);
+    font-size: vw(24px);
     color: $colorBlack;
     font-weight: normal;
   }
 
   &__format {
-    @include resize(font-size, 11, 9);
+    font-size: vw(11px);
     color: rgba($colorBlack, 0.5);
     text-transform: uppercase;
     text-overflow: ellipsis;
@@ -37,7 +37,7 @@
   }
 
   &__price, &__all {
-    @include resize(font-size, 18, 13);
+    font-size: vw(18px);
     color: $colorBlack;
     overflow: hidden;
     white-space: nowrap;
@@ -45,7 +45,7 @@
   }
 
   &__hall, &__description {
-    font-size: 13px;
+    font-size: vw(13px);
     text-transform: uppercase;
     color: rgba($colorBlack, 0.5);
     text-overflow: ellipsis;

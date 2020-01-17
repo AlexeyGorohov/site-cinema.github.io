@@ -2,22 +2,22 @@
   background-color: #1A1A1A;
 
   &__menu {
-    padding: 110px 0 80px;
-    @include resize(font-size, 24, 20, 17);
+    padding: vw(110px) 0 vw(80px);
+    font-size: vw(24px);
 
     .grid__col {
-      margin-bottom: 30px;
+      margin-bottom: vw(30px);
     }
   }
 
   &__heading {
     color: #fff;
-    font-size: 24px;
+    font-size: vw(24px);
   }
 
   &__copyright {
     letter-spacing: 0.4px;
-    padding: 10px 0;
+    padding: vw(10px) 0;
     border-top: 1px solid rgba(#fff, .5);;
     color: rgba(#fff, .5);
   }

@@ -1,12 +1,12 @@
 .contact {
-  @include resize(font-size, 20, 16);
-  @include resize(margin-top, 35, 20);
+  font-size: vw(20px);
+  margin-top: vw(35px);
 
   &__item {
     display: flex;
 
     &:not(:first-of-type) {
-      @include resize(margin-top, 20, 10);
+      margin-top: vw(20px);
     }
   }
 

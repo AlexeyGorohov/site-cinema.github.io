@@ -1,5 +1,6 @@
 .tab {
   display: flex;
+  flex-wrap: wrap;
 
   &_hidden {
     display: none;
@@ -7,23 +8,24 @@
 
   &_main {
     align-items: center;
-    margin: 0 -25px;
+    margin: 0 vw(-25px);
 
     .tab__discriptions {
       display: none;
-      font-size: 17px;
+      font-size: vw(17px);
       line-height: 1.2;
       font-weight: 500;
     }
 
     .tab__day {
-      @include resize(font-size, 28, 26, 24);
+      font-size: vw(28px);
     }
 
     .tab__item {
       cursor: pointer;
       color: rgba(60, 60, 67, 0.6);
-      padding: 0 25px;
+      padding-left: vw(25px);
+      padding-right: vw(25px);
 
       &_active {
         color: $colorBlack;
@@ -32,7 +34,7 @@
         .tab__day {
           font-weight: 500;
           color: $colorBlack;
-          @include resize(font-size, 40, 32, 24);
+          font-size: vw(40px);
         }
 
         .tab__discriptions {
@@ -48,12 +50,12 @@
     .tab__day {
       color: rgba(60, 60, 67, .6);
       @include transition-default;
-      @include resize(font-size, 24, 16);
+      font-size: vw(24px);
     }
 
     .tab__item {
-      @include resize(padding-left, 15, 5);
-      @include resize(padding-right, 15, 5);
+      padding-left: vw(15px);
+      padding-right: vw(15px);
 
       &_active {
         .tab__day {

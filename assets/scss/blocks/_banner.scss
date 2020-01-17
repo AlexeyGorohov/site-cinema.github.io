@@ -1,7 +1,7 @@
 .banner {
-  padding-top: 100px;
+  padding-top: vw(100px);
   color: #ffffff;
-  min-height: 600px;
+  min-height: vw(600px);
   display: flex;
   background: linear-gradient(
       90deg,
@@ -21,12 +21,12 @@
   }
 
   &__cards {
-    margin: 20px -10px 0;
+    margin: vw(20px) vw(-10px) 0;
     display: flex;
     flex-wrap: wrap;
 
     .time-card {
-      margin: 10px;
+      margin: vw(10px);
     }
   }
 
@@ -44,7 +44,7 @@
   &_header {
     position: relative;
     display: flex;
-    @include resize(padding-bottom, 60, 30);
+    padding-bottom: vw(60px);
   }
 
   &_detail {
@@ -68,8 +68,8 @@
 
     .banner__image {
       align-self: flex-start;
-      min-width: 230px;
-      border-radius: 10px;
+      min-width: vw(230px);
+      border-radius: vw(10px);
 
       &::before {
         content: '';
@@ -79,7 +79,7 @@
     }
 
     .banner__content {
-      padding-left: 70px;
+      padding-left: vw(70px);
     }
 
     .banner__row {
@@ -92,60 +92,60 @@
     }
 
     .banner__format {
-      padding: 1px 10px;
+      padding: vw(1px) vw(10px);
       display: inline-flex;
       line-height: 1;
       align-items: center;
-      border-radius: 10px;
+      border-radius: vw(10px);
       border: 2px solid #ffffff;
       font-weight: 500;
       letter-spacing: -0.41px;
-      @include resize(font-size, 18, 14);
+      font-size: vw(18px);
     }
 
     .banner__rating {
-      margin-left: 15px;
+      margin-left: vw(15px);
+      font-size: vw(32px);
       color: $colorMain;
       display: inline-block;
-      @include resize(font-size, 32, 20);
     }
 
     .banner__age-limit {
-      margin-left: 15px;
+      margin-left: vw(15px);
+      font-size: vw(32px);
       display: inline-block;
       color: rgba(#ffffff, 0.6);
-      @include resize(font-size, 32, 20);
     }
 
     .banner__heading {
-      margin-top: 10px;
+      margin-top: vw(10px);
+      font-size: vw(43px);
       font-weight: 500;
-      @include resize(font-size, 43, 30);
     }
 
     .banner__duration {
-      @include resize(font-size, 28, 18);
+      font-size: vw(28px);
     }
 
     .banner__type {
-      margin-left: 10px;
+      margin-left: vw(10px);
+      font-size: vw(28px);
       display: inline-block;
       color: rgba(#ffffff, 0.6);
-      @include resize(font-size, 28, 18);
     }
 
     .banner__info {
-      margin-top: 20px;
+      margin-top: vw(20px);
     }
 
     .banner__description {
-      padding: 20px 0 30px;
+      padding: vw(20px) 0 vw(30px);
     }
 
     .banner__linecount {
-      @include resize(font-size, 19, 16);
+      margin-bottom: vw(10px);
+      font-size: vw(19px);
       line-height: 1.6;
-      margin-bottom: 10px;
     }
 
     .link_more {
@@ -163,7 +163,7 @@
       }
 
       .banner__row {
-        transform: translateY(10px);
+        transform: translateY(vw(10px));
       }
 
       .link_more {

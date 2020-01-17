@@ -1,36 +1,37 @@
 .card {
   border-radius: 12px;
   background-color: $colorWhite;
-  min-height: 405px;
-  padding: 10px 20px 20px;
+  min-height: vw(405px);
+  padding: vw(10px) vw(20px) vw(20px);
 
   &__poster {
     float: left;
     position: relative;
-    max-width: 240px;
+    max-width: vw(240px);
+    margin-bottom: vw(10px);
     width: 100%;
-    margin-bottom: 10px;
   }
 
   &__poster-image {
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 12px;
-    transform: translateX(-40px);
+    border-radius: vw(12px);
+    transform: translateX(vw(-40px));
     padding-bottom: calc(346 / 240 * 100%);
   }
 
   &__content {
-    padding-left: 20px;
+    padding-left: vw(20px);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
   }
 
   &__heading {
-    padding-top: 25px;
+    padding-top: vw(25px);
+    font-size: vw(28px);
     font-weight: 500;
-    @include resize(font-size, 28, 20);
 
     @media (max-width: $bpMobile) {
       display: none;
@@ -38,7 +39,7 @@
   }
 
   &__description {
-    margin-top: 10px;
+    margin-top: vw(10px);
     font-weight: normal;
     color: rgba($colorBlack, 0.5);
 
@@ -48,12 +49,12 @@
   }
 
   &__timetable {
-    margin: 10px -10px -10px;
-    transform: translateX(-10px);
+    margin: vw(10px) vw(-10px) vw(-10px);
+    transform: translateX(vw(-10px));
   }
 
   &__time-card {
     display: inline-block;
-    padding: 10px;
+    padding: vw(10px);
   }
 }

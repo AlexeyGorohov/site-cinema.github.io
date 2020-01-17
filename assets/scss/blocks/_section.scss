@@ -7,68 +7,58 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 25px -20px -25px;
+    margin: vw(25px) vw(-20px) vw(-25px);
 
     .section__card {
       display: flex;
       width: 50%;
-      padding: 25px 20px;
+      padding: vw(25px) vw(20px);
     }
   }
 
   &_offers {
-    @include resize(margin-top, 75, 40);
+    margin-top: vw(75px);
 
     .section__heading {
-      @include resize(margin-bottom, 50, 30);
+      margin-bottom: vw(50px);
     }
 
     .section__wrap {
-      margin: -20px;
+      margin: vw(-20px);
       display: flex;
       flex-wrap: wrap;
-
-      @media (max-width: $bpTablet) {
-        margin: -15px;
-      }
     }
 
     .section__card {
-      padding: 20px;
+      padding: vw(20px);
       flex: 0 0 span(4);
       max-width: span(4);
-
-      @media (max-width: $bpTablet) {
-        padding: 15px;
-        flex: 0 0 span(6);
-        max-width: span(6);
-      }
     }
   }
 
   &_timetable-detail {
-    @include resize(padding-top, 55, 20);
+    padding-top: vw(55px);
 
     .section__cards {
-      margin: -10px;
+      margin: vw(-10px);
       display: flex;
       flex-wrap: wrap;
     }
 
     .section__card {
-      padding: 10px;
+      padding: vw(10px);
     }
 
     .section__group {
       &:not(:first-of-type) {
-        @include resize(margin-top, 55, 20);
+        margin-top: vw(55px);
       }
     }
 
     .section__date {
       font-weight: 500;
-      font-size: 40px;
-      @include resize(padding-bottom, 55, 20);
+      font-size: vw(40px);
+      padding-bottom: vw(55px);
     }
   }
 

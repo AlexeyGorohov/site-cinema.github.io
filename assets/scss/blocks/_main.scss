@@ -1,4 +1,4 @@
 .main {
-  @include resize(padding-bottom, 110, 65);
-  @include resize(padding-top, 50, 10);
+  padding-bottom: vw(110px);
+  padding-top: vw(50px);
 }

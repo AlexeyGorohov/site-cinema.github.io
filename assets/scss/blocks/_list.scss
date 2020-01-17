@@ -1,10 +1,10 @@
 .list {
   &_footer {
-    margin-top: 25px;
+    margin-top: vw(25px);
 
     .list__item {
       &:not(:last-of-type) {
-        margin-bottom: 25px;
+        margin-bottom: vw(25px);
       }
 
       .link {

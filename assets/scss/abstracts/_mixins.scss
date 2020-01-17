@@ -30,7 +30,6 @@
 
 @mixin linecount($ls, $lh:1.4) {
   display: block;
-  display: -webkit-box;
   line-height: $lh;
   max-height: #{$lh*$ls}em;
   -webkit-line-clamp: $ls;
@@ -38,3 +37,8 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
+
+@function vw($px) {  
+    @return ($px / $bpDesktop) * 100vw;
+}
+

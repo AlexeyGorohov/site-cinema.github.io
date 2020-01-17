@@ -1,5 +1,5 @@
 .container {
-  max-width: $widthContainer;
+  max-width: vw($widthContainer);
   margin-left: auto;
   margin-right: auto;
   padding: 0 gutter();

@@ -1,0 +1,28 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+  cursor: pointer;
+
+  &_menu {
+    color: #ffffff;
+    background: $colorMain;
+    text-transform: uppercase;
+    font-style: normal;
+    border-radius: 4px;
+    padding: 10px 35px;
+    @include resize(font-size, 19, 16);
+    max-width: 150px;
+    white-space: nowrap;
+
+    &:hover {
+      background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.2),
+          rgba(255, 255, 255, 0.2)
+        ),
+        #d24a43;
+    }
+  }
+}

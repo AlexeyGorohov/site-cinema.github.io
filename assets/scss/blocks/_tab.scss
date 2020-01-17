@@ -1,0 +1,66 @@
+.tab {
+  display: flex;
+
+  &_hidden {
+    display: none;
+  }
+
+  &_main {
+    align-items: center;
+    margin: 0 -25px;
+
+    .tab__discriptions {
+      display: none;
+      font-size: 17px;
+      line-height: 1.2;
+      font-weight: 500;
+    }
+
+    .tab__day {
+      @include resize(font-size, 28, 26, 24);
+    }
+
+    .tab__item {
+      cursor: pointer;
+      color: rgba(60, 60, 67, 0.6);
+      padding: 0 25px;
+
+      &_active {
+        color: $colorBlack;
+        line-height: 1.2;
+
+        .tab__day {
+          font-weight: 500;
+          color: $colorBlack;
+          @include resize(font-size, 40, 32, 24);
+        }
+
+        .tab__discriptions {
+          display: block;
+        }
+      }
+    }
+  }          
+
+  &_header {
+    justify-content: center;
+
+    .tab__day {
+      color: rgba(60, 60, 67, .6);
+      @include transition-default;
+      @include resize(font-size, 24, 16);
+    }
+
+    .tab__item {
+      @include resize(padding-left, 15, 5);
+      @include resize(padding-right, 15, 5);
+
+      &_active {
+        .tab__day {
+          color: rgba($colorBlack, 0.9);
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

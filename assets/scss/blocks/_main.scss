@@ -1,0 +1,4 @@
+.main {
+  @include resize(padding-bottom, 110, 65);
+  @include resize(padding-top, 50, 10);
+}

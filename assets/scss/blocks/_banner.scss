@@ -1,0 +1,174 @@
+.banner {
+  padding-top: 100px;
+  color: #ffffff;
+  min-height: 600px;
+  display: flex;
+  background: linear-gradient(
+      90deg,
+      #000000 0%,
+      rgba(0, 0, 0, 0) 33.33%,
+      rgba(0, 0, 0, 0) 67.19%,
+      #000000 100%
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.8) -0.08%, rgba(0, 0, 0, 0) 100%);
+  @include transition-default;
+
+  &__container {
+    @extend .container;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__cards {
+    margin: 20px -10px 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    .time-card {
+      margin: 10px;
+    }
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  &_header {
+    position: relative;
+    display: flex;
+    @include resize(padding-bottom, 60, 30);
+  }
+
+  &_detail {
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      background: linear-gradient(
+        180deg,
+        #000000 -0.08%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      position: absolute;
+      height: 270px;
+      width: 100%;
+      left: 0;
+      top: 0;
+      z-index: 1;
+    }
+
+    .banner__image {
+      align-self: flex-start;
+      min-width: 230px;
+      border-radius: 10px;
+
+      &::before {
+        content: '';
+        display: block;
+        padding-bottom: calc(345 / 230 * 100%);
+      }
+    }
+
+    .banner__content {
+      padding-left: 70px;
+    }
+
+    .banner__row {
+      @include transition-default;
+      transform: translateY(0);
+    }
+
+    .banner__add-info {
+      display: flex;
+    }
+
+    .banner__format {
+      padding: 1px 10px;
+      display: inline-flex;
+      line-height: 1;
+      align-items: center;
+      border-radius: 10px;
+      border: 2px solid #ffffff;
+      font-weight: 500;
+      letter-spacing: -0.41px;
+      @include resize(font-size, 18, 14);
+    }
+
+    .banner__rating {
+      margin-left: 15px;
+      color: $colorMain;
+      display: inline-block;
+      @include resize(font-size, 32, 20);
+    }
+
+    .banner__age-limit {
+      margin-left: 15px;
+      display: inline-block;
+      color: rgba(#ffffff, 0.6);
+      @include resize(font-size, 32, 20);
+    }
+
+    .banner__heading {
+      margin-top: 10px;
+      font-weight: 500;
+      @include resize(font-size, 43, 30);
+    }
+
+    .banner__duration {
+      @include resize(font-size, 28, 18);
+    }
+
+    .banner__type {
+      margin-left: 10px;
+      display: inline-block;
+      color: rgba(#ffffff, 0.6);
+      @include resize(font-size, 28, 18);
+    }
+
+    .banner__info {
+      margin-top: 20px;
+    }
+
+    .banner__description {
+      padding: 20px 0 30px;
+    }
+
+    .banner__linecount {
+      @include resize(font-size, 19, 16);
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .link_more {
+      display: none;
+    }
+
+    &-close {
+      &::before {
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      .banner__linecount {
+        @include linecount(3, 1.6);
+      }
+
+      .banner__row {
+        transform: translateY(10px);
+      }
+
+      .link_more {
+        display: inline-block;
+      }
+    }
+  }
+}

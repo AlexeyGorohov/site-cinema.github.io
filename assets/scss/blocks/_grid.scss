@@ -1,0 +1,49 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-left: -1*gutter();
+  margin-right: -1*gutter();
+
+  &__col {
+    padding: 0 gutter();
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+
+    @for $i from 1 through 12 {
+      &.col-#{$i} {
+        flex: 0 0 span($i);
+        max-width: span($i);
+      }
+    }
+
+    &.col-4-6-12 {
+      padding: 0 gutter();
+      flex: 0 0 span(4);
+      max-width: span(4);
+
+      @media (max-width: $bpTablet) {
+        padding: 0 gutter();
+        flex: 0 0 span(6);
+        max-width: span(6);
+      }
+
+      @media (max-width: $bpMobile) {
+        padding: 0 gutter();
+        flex: 0 0 span(12);
+        max-width: span(12); 
+      }
+    }
+  }
+
+  &_no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+
+    > .grid__col, > [class*="col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}

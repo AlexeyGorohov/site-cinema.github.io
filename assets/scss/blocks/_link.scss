@@ -1,0 +1,19 @@
+.link {
+  &_text {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &_more, &_open {
+    color: $colorMain;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

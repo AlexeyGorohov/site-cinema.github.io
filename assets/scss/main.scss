@@ -1,0 +1,47 @@
+@charset 'UTF-8';
+
+// 1. Configuration and mixins
+@import
+  'abstracts/variables',
+  'abstracts/mixins';
+
+// 2. Vendors
+@import
+  '~css-reset-and-normalize-sass/scss/reset-and-normalize';
+
+// 3. Base stuff
+@import
+  'base/fonts',
+  'base/base',
+  'base/helpers',
+  'base/typography';
+
+// 4. Icons
+@import
+  'icons/icons';
+
+// 5. Blocks
+@import
+  'blocks/grid', 
+  'blocks/button', 
+  'blocks/header',
+  'blocks/section',
+  'blocks/card',
+  'blocks/time-card',
+  'blocks/offer-card',
+  'blocks/banner',
+  'blocks/tab',
+  'blocks/footer',
+  'blocks/list',
+  'blocks/link',
+  'blocks/main',
+  'blocks/contact',
+  'blocks/menu';
+
+// 6. Page-specific styles
+@import
+  'pages/home';
+
+// 7. Themes
+@import
+  'themes/default';

@@ -1,0 +1,17 @@
+.contact {
+  @include resize(font-size, 20, 16);
+  @include resize(margin-top, 35, 20);
+
+  &__item {
+    display: flex;
+
+    &:not(:first-of-type) {
+      @include resize(margin-top, 20, 10);
+    }
+  }
+
+  &__title {
+    flex: 0 0 span(3);
+    max-width: 0 0 span(3);
+  }
+}

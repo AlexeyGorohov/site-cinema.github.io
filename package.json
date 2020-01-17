@@ -1,0 +1,36 @@
+{
+  "name": "sinemabox-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --watch --mode development"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "css-reset-and-normalize-sass": "^0.1.2",
+    "sass-mediascreen": "^1.0.2",
+    "susy": "^3.0.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "group-css-media-queries-loader": "^3.0.2",
+    "iconfont-plugin-webpack": "^1.1.4",
+    "iconfont-webpack-plugin": "^4.2.1",
+    "imports-loader": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^1.0.0",
+    "svg-transform-loader": "^2.0.8",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-webfont": "0.0.1-alpha.10"
+  }
+}

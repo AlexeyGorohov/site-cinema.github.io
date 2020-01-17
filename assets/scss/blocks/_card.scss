@@ -1,0 +1,59 @@
+.card {
+  border-radius: 12px;
+  background-color: $colorWhite;
+  min-height: 405px;
+  padding: 10px 20px 20px;
+
+  &__poster {
+    float: left;
+    position: relative;
+    max-width: 240px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  &__poster-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    transform: translateX(-40px);
+    padding-bottom: calc(346 / 240 * 100%);
+  }
+
+  &__content {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__heading {
+    padding-top: 25px;
+    font-weight: 500;
+    @include resize(font-size, 28, 20);
+
+    @media (max-width: $bpMobile) {
+      display: none;
+    }
+  }
+
+  &__description {
+    margin-top: 10px;
+    font-weight: normal;
+    color: rgba($colorBlack, 0.5);
+
+    @media (max-width: $bpMobile) {
+      display: none;
+    }
+  }
+
+  &__timetable {
+    margin: 10px -10px -10px;
+    transform: translateX(-10px);
+  }
+
+  &__time-card {
+    display: inline-block;
+    padding: 10px;
+  }
+}

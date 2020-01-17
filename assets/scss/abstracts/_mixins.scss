@@ -1,0 +1,40 @@
+@mixin full {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@mixin transition-default {
+  transition: .3s ease;
+}
+
+@mixin resize($property, $max, $mid, $min: false) {
+  #{$property}: $max*1px;
+
+  @media (max-width: $bpDesktop) {
+    #{$property}: calc((#{($max - $mid)} / #{($bpDesktop - $bpMobile - 1px)/1px}) * (100vw - #{$bpDesktop}) + #{$max*1px});
+  }
+
+  @if ($min) {
+    @media (max-width: $bpMobile) {
+      #{$property}: calc((#{($mid - $min)} / #{($bpMobile - 320px)/1px}) * (100vw - #{$bpMobile}) + #{$mid*1px});
+    }
+  } @else {
+    @media (max-width: $bpMobile) {
+      #{$property}: $mid*1px;
+    }
+  }
+}
+
+@mixin linecount($ls, $lh:1.4) {
+  display: block;
+  display: -webkit-box;
+  line-height: $lh;
+  max-height: #{$lh*$ls}em;
+  -webkit-line-clamp: $ls;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

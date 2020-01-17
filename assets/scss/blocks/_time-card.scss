@@ -1,0 +1,61 @@
+.time-card {
+  box-shadow: 0px 1px 8px rgba($colorBlack, 0.15);
+  background-color: $colorMain;
+  border-radius: 15px;
+  display: inline-flex;
+
+  &__wrap {
+    cursor: pointer;
+    transform: translateY(2px);
+    border-radius: 15px;
+    line-height: 1.18;
+    @include resize(padding-top, 12, 5);
+    @include resize(padding-bottom, 12, 5);
+    @include resize(padding-right, 12, 10);
+    @include resize(padding-left, 15, 10);
+    @include resize(width, 100, 75);
+    @include resize(height, 100, 75);
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__time {
+    @include resize(font-size, 24, 18);
+    color: $colorBlack;
+    font-weight: normal;
+  }
+
+  &__format {
+    @include resize(font-size, 11, 9);
+    color: rgba($colorBlack, 0.5);
+    text-transform: uppercase;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &__price, &__all {
+    @include resize(font-size, 18, 13);
+    color: $colorBlack;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__hall, &__description {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: rgba($colorBlack, 0.5);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &_all {
+    .time-card__wrap {
+      justify-content: flex-end;
+    }
+  }
+}

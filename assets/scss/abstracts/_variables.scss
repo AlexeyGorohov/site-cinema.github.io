@@ -1,0 +1,22 @@
+$widthContainer: 1640px;
+
+$bpDesktop: 1580px;
+$bpLaptop: 1240px;
+$bpTablet: 1024px;
+$bpMobile: 767px;
+
+// colors
+$colorMain: #D24A43;
+$colorBlack: #000000;
+$colorGray: rgba(#000000, .5);
+$colorWhite: #F2F2F2;
+
+// setting grid system
+@import '~susy/sass/susy';
+
+$susy: (
+  'columns': susy-repeat(12),
+  'gutters': 30px,
+  'spread': 'wide',
+  'container-spread': 'wide'
+);

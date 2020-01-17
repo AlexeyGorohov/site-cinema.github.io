@@ -1,0 +1,20 @@
+.list {
+  &_footer {
+    margin-top: 25px;
+
+    .list__item {
+      &:not(:last-of-type) {
+        margin-bottom: 25px;
+      }
+
+      .link {
+        transition: color .3s ease;
+        color: rgba(#fff, 0.5);
+
+        &:hover {
+          color: rgba(#fff, 1);
+        }
+      }
+    }
+  }
+}

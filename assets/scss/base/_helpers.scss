@@ -1,7 +1,20 @@
 .container {
-  max-width: vw($widthContainer);
+  max-width: vw($widthContainerDesktop);
   margin-left: auto;
   margin-right: auto;
   padding: 0 gutter();
   width: 100%;
+
+  @include device-media(tablet) {
+    max-width: vw($widthContainerTablet, $bpTabletMin);
+  }
+
+  @include device-media(mobile) {
+    padding: 0 20px;
+    max-width: 100%;
+  }
+}
+
+.mx-border-radius {
+  @include resize-vw(border-radius, 12, 12, 10);
 }

@@ -7,38 +7,98 @@
 }
 
 @mixin transition-default {
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
-@mixin resize($property, $max, $mid, $min: false) {
-  #{$property}: $max*1px;
-
-  @media (max-width: $bpDesktop) {
-    #{$property}: calc((#{($max - $mid)} / #{($bpDesktop - $bpMobile - 1px)/1px}) * (100vw - #{$bpDesktop}) + #{$max*1px});
-  }
-
-  @if ($min) {
-    @media (max-width: $bpMobile) {
-      #{$property}: calc((#{($mid - $min)} / #{($bpMobile - 320px)/1px}) * (100vw - #{$bpMobile}) + #{$mid*1px});
-    }
-  } @else {
-    @media (max-width: $bpMobile) {
-      #{$property}: $mid*1px;
-    }
+@mixin ie11 {
+  @media screen and (-ms-high-contrast: active),
+    screen and (-ms-high-contrast: none) {
+    @content;
   }
 }
 
-@mixin linecount($ls, $lh:1.4) {
+@mixin linecount($ls, $lh: 1.4) {
   display: block;
   line-height: $lh;
-  max-height: #{$lh*$ls}em;
+  max-height: #{$lh * $ls}em;
   -webkit-line-clamp: $ls;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
-@function vw($px) {  
-    @return ($px / $bpDesktop) * 100vw;
+@function vw($px, $bp: $bpDesktopMax) {
+  @return ($px / $bp) * 100vw;
 }
 
+@mixin device-media($devices) {
+  @each $device in $devices {
+    @if $device == desktop-lg {
+      @media (min-width: $bpDesktopMax + 1) {
+        @content;
+      }
+
+      @include device(desktop-lg) {
+        @content;
+      }
+    } @else if $device == desktop {
+      @media (min-width: $bpDesktopMin) {
+        @content;
+      }
+
+      @include device(desktop) {
+        @content;
+      }
+    } @else if $device == laptop {
+      @media (max-width: $bpLaptopMax) and (min-width: $bpLaptopMin) {
+        @content;
+      }
+
+      @include device(laptop) {
+        @content;
+      }
+    } @else if $device == tablet {
+      @media (max-width: $bpTabletMax) and (min-width: $bpTabletMin) {
+        @content;
+      }
+
+      @include device(tablet) {
+        @content;
+      }
+    } @else if $device == mobile {
+      @media (max-width: $bpMobileMax) {
+        @content;
+      }
+
+      @include device(mobile) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin resize-vw($property, $sizeDesktop, $sizeTablet, $sizeMobile) {
+  @include device-media(desktop-lg) {
+    #{$property}: $sizeDesktop * 1px;
+  }
+
+  // Desktop
+  @include device-media(desktop) {
+    #{$property}: vw($sizeDesktop * 1px, $bpDesktopMax);
+  }
+
+  // Laptop
+  @include device-media(laptop) {
+    #{$property}: vw(($sizeTablet + $sizeMobile)/2 * 1px, $bpLaptopMax);
+  }
+
+  // Tablet
+  @include device-media(tablet) {
+    #{$property}: vw($sizeTablet * 1px, $bpTabletMin);
+  }
+
+  // Mobile
+  @include device-media(mobile) {
+    #{$property}: vw($sizeMobile * 1px, $bpMobileMin);
+  }
+}

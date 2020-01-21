@@ -1,7 +1,8 @@
 .offer-card {
-  border-radius: vw(12px);
+  @extend .mx-border-radius;
+  @include resize-vw(font-size, 24, 20, 18);
   overflow: hidden;
-  box-shadow: 0px vw(5px) vw(20px) rgba($colorBlack, 0.1);
+  box-shadow: 0px vw(5px) vw(20px) rgba($colorBlack, .1);
 
   &__image {
     background-position: center;
@@ -12,13 +13,19 @@
       content: '';
       display: block;
       padding-bottom: calc(336/500*100%);
+
+      @include  device-media(laptop tablet) {
+        padding-bottom: calc(250/500*100%);
+      }
     }
   }
 
   &__heading {
-    padding: vw(25px) vw(20px) vw(60px);
     color: $colorBlack;
     font-weight: 500;
-    font-size: vw(24px);
+    @include resize-vw(padding-top, 25, 20, 20);
+    @include resize-vw(padding-left, 20, 20, 20);
+    @include resize-vw(padding-right, 20, 20, 20);
+    @include resize-vw(padding-bottom, 60, 50, 40);
   }
 }

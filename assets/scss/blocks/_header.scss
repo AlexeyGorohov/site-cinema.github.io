@@ -9,42 +9,53 @@
   &__grid {
     @extend .grid;
     align-items: center;
-    height: vw(80px);
     padding: vw(10px) 0;
+    min-height: 100px;
+
+    @include ie11() {
+      height: 100px;
+    }
+
+    @include device-media(laptop tablet) {
+      min-height: 60px;
+      padding: vw(10px, $bpTabletMin) 0;
+    }
+
+    @include device-media(mobile) {
+      min-height: 80px;
+      padding: vw(10px, $bpMobileMin) 0;
+    }
   }
 
-  &__info {
-    padding: 0 gutter();
-    display: flex;
+  &__menu {
+    @include device-media(desktop laptop tablet) {
+      padding: 0 gutter() 0 0;
+    }
   }
 
   &__address {
-    font-weight: 500;
-    margin-right: vw(40px);
-    font-size: vw(24px);
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    @include transition-default;
-
-    &:hover {
-      color: $colorMain;
-    }
+    @include resize-vw(margin-right, 40, 20, 10);
   }
 
   &__logo {
     margin-right: auto;
     padding: 0 gutter();
-    max-width: vw(290px);
+
+    @include device-media(mobile) {
+      padding: 0 0 0 vw(10px, $bpMobileMin);
+    }
+
+    img {
+      @include resize-vw(max-width, 260, 118, 108);
+    }
   }
 
   &__tab {
     flex: 1 0 auto;
-  }
 
-  &__icon {
-    color: $colorMain;
-    margin-right: vw(5px);
+    @media (max-width: $bpMobileMax) {
+      display: none;
+    }
   }
 
   &_has-banner {

@@ -1,24 +1,25 @@
 .footer {
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
 
   &__menu {
-    padding: vw(110px) 0 vw(80px);
-    font-size: vw(24px);
+    @include resize-vw(padding-top, 110, 60, 40);
+    @include resize-vw(padding-bottom, 80, 40, 40);
+    @include resize-vw(font-size, 17, 17, 17);
 
     .grid__col {
-      margin-bottom: vw(30px);
+      @include resize-vw(margin-bottom, 30, 25, 20);
     }
   }
 
   &__heading {
     color: #fff;
-    font-size: vw(24px);
+    @include resize-vw(font-size, 24, 17, 17);
   }
 
   &__copyright {
     letter-spacing: 0.4px;
-    padding: vw(10px) 0;
-    border-top: 1px solid rgba(#fff, .5);;
-    color: rgba(#fff, .5);
+    border-top: 1px solid rgba(#fff, 0.5);
+    color: rgba(#fff, 0.5);
+    @include resize-vw(padding, 10, 10, 10);
   }
 }

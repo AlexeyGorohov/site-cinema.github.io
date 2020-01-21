@@ -1,17 +1,22 @@
 .contact {
-  font-size: vw(20px);
-  margin-top: vw(35px);
+  @include resize-vw(font-size, 20, 17, 16);
+  @include resize-vw(margin-top, 35, 30, 25);
 
   &__item {
     display: flex;
 
     &:not(:first-of-type) {
-      margin-top: vw(20px);
+      @include resize-vw(margin-top, 20, 20, 20);
     }
   }
 
   &__title {
     flex: 0 0 span(3);
     max-width: 0 0 span(3);
+
+    @include device-media(mobile) {
+      flex: 0 0 span(5);
+      max-width: 0 0 span(5);
+    }
   }
 }

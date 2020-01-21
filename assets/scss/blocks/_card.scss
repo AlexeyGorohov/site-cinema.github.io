@@ -1,8 +1,25 @@
 .card {
-  border-radius: 12px;
   background-color: $colorWhite;
   min-height: vw(405px);
+  @include resize-vw(border-radius, 12, 12, 12);
   padding: vw(10px) vw(20px) vw(20px);
+
+  @include device-media(mobile) {
+    padding: vw(20px, $bpMobileMin) vw(10px, $bpMobileMin);
+  }
+
+  &::after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+
+  // класс для показа подробно .card_open
+  &_open {
+    .card__timetable {
+      transform: translateX(0);
+    }
+  }
 
   &__poster {
     float: left;
@@ -10,51 +27,98 @@
     max-width: vw(240px);
     margin-bottom: vw(10px);
     width: 100%;
+
+    @include device-media(tablet) {
+      max-width: vw(216px, $bpTabletMin);
+    }
+
+    @include device-media(mobile) {
+      margin-bottom: 0;
+      max-width: vw(190px, $bpMobileMin);
+      margin-right: vw(10px, $bpMobileMin);
+      margin-left: vw(7px, $bpMobileMin);
+    }
   }
 
   &__poster-image {
-    background-size: contain;
+    overflow: hidden;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: vw(12px);
     transform: translateX(vw(-40px));
     padding-bottom: calc(346 / 240 * 100%);
-  }
+    @include resize-vw(border-radius, 12, 12, 12);
 
-  &__content {
-    padding-left: vw(20px);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    @include device-media(tablet) {
+      transform: translateX(vw(-20px, $bpTabletMin));
+      padding-bottom: calc(325 / 216 * 100%);
+    }
+
+    @include device-media(mobile) {
+      transform: translateX(0);
+      padding-bottom: calc(295 / 190 * 100%);
+    }
   }
 
   &__heading {
-    padding-top: vw(25px);
-    font-size: vw(28px);
     font-weight: 500;
+    @include resize-vw(line-height, 25, 20, 20);
+    @include resize-vw(line-height, 30, 26, 26);
+    @include resize-vw(font-size, 28, 24, 24);
 
-    @media (max-width: $bpMobile) {
+    @include device-media(mobile) {
       display: none;
     }
   }
 
   &__description {
-    margin-top: vw(10px);
     font-weight: normal;
     color: rgba($colorBlack, 0.5);
+    @include resize-vw(line-height, 25, 23, 21);
+    @include resize-vw(margin-top, 10, 10, 10);
+    @include resize-vw(font-size, 20, 18, 16);
 
-    @media (max-width: $bpMobile) {
+    @include device-media(mobile) {
       display: none;
+    }
+
+    &_mobile {
+      display: none;
+
+      @include device-media(mobile) {
+        padding: 0 vw(10px, $bpMobileMin);
+        display: block;
+      }
     }
   }
 
   &__timetable {
+    display: flex;
+    flex-wrap: wrap;
     margin: vw(10px) vw(-10px) vw(-10px);
     transform: translateX(vw(-10px));
+
+    @include device-media(tablet) {
+      margin: vw(10px, $bpTabletMin) vw(-10px, $bpTabletMin) vw(-10px, $bpTabletMin);
+      transform: translateX(vw(-10px, $bpTabletMin));
+    }
+
+    @include device-media(mobile) {
+      margin: vw(-10px, $bpMobileMin) 0;
+      transform: translateX(0);
+    }
   }
 
   &__time-card {
     display: inline-block;
     padding: vw(10px);
+
+    @include device-media(tablet) {
+      padding: vw(10px, $bpTabletMin);
+    }
+
+    @include device-media(mobile) {
+      padding: vw(10px, $bpMobileMin);
+    }
   }
 }

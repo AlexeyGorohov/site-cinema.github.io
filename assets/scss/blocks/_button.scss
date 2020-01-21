@@ -1,33 +1,52 @@
 .button {
   display: inline-flex;
-  align-items: center;
   justify-content: center;
-  @include transition-default;
+  align-items: center;
   cursor: pointer;
+  @include transition-default;
 
   &_menu {
-    color: #ffffff;
-    background: linear-gradient(
-        0deg,
-        rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 0)
-      ),
-      #d24a43;
-    text-transform: uppercase;
-    font-style: normal;
-    border-radius: vw(4px);
-    padding: vw(10px) vw(35px);
-    font-size: vw(19px);
-    max-width: vw(150px);
-    white-space: nowrap;
-
-    &:hover {
+    @include device-media(desktop laptop) {
+      padding: vw(10px) vw(35px);
+      border-radius: vw(4px);
+      color: #ffffff;
       background: linear-gradient(
           0deg,
-          rgba(255, 255, 255, 0.2),
-          rgba(255, 255, 255, 0.2)
+          rgba($colorBlack, 0),
+          rgba($colorBlack, 0)
         ),
-        #d24a43;
+        $colorMain;
+
+      &:hover {
+        background: linear-gradient(
+            0deg,
+            rgba($colorBlack, 0.2),
+            rgba($colorBlack, 0.2)
+          ),
+          #d24a43;
+      }
+    }
+
+    .button__text {
+      text-transform: uppercase;
+      display: inline-block;
+      white-space: nowrap;
+      font-style: normal;
+      max-width: vw(150px);
+      font-size: vw(19px);
+
+      @include device-media(tablet mobile) {
+        display: none;
+      }
+    }
+
+    .button__icon {
+      color: $colorBlack;
+      display: none;
+
+      @include device-media(tablet mobile) {
+        display: inline-block;
+      }
     }
   }
 }

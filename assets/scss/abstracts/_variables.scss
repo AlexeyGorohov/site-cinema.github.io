@@ -1,25 +1,36 @@
-$widthContainer: 1640px;
+$widthContainerDesktop: 1640px;
+$widthContainerTablet: 714px;
 
-$bpDesktop: 1920px;
-$bpLaptop: 1240px;
-$bpTablet: 1024px;
-$bpMobile: 767px;
-
-// rfs
-$rfs-breakpoint: 1640px;
+$bpDesktopMax: 1920px;
+$bpDesktopMin: 1200px;
+$bpLaptopMax: 1199px;
+$bpLaptopMin: 1024px;
+$bpTabletMax: 1023px;
+$bpTabletMin: 768px;
+$bpMobileMax: 767px;
+$bpMobileMin: 375px;
 
 // colors
-$colorMain: #D24A43;
+$colorMain: #d24a43;
 $colorBlack: #000000;
-$colorGray: rgba(#000000, .5);
-$colorWhite: #F2F2F2;
+$colorGray: rgba(#000000, 0.5);
+$colorWhite: #f2f2f2;
 
 // setting grid system
 @import '~susy/sass/susy';
 
 $susy: (
   'columns': susy-repeat(12),
-  'gutters': 30px,
+  'gutters': 0.25,
   'spread': 'wide',
   'container-spread': 'wide'
+);
+
+// setting media sass screen
+
+$ms-devices: (
+  desktop-lg: (
+    group: true,
+    min: 1921px
+  )
 );

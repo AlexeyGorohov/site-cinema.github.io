@@ -1,4 +1,5 @@
 .main {
   padding-bottom: vw(110px);
-  padding-top: vw(50px);
+  @include resize-vw(padding-bottom, 110, 60, 40);
+  @include resize-vw(padding-top, 50, 40, 30);
 }

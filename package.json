@@ -11,7 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "css-reset-and-normalize-sass": "^0.1.2",
-    "rfs": "^9.0.2",
     "sass-mediascreen": "^1.0.2",
     "susy": "^3.0.5"
   },

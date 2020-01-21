@@ -1,6 +1,8 @@
 $__iconfont__data: map-merge(if(global_variable_exists('__iconfont__data'), $__iconfont__data, ()), (
 	"icons": (
-		"marker": "\ea01"
+		"calendar": "\ea01",
+		"marker": "\ea02",
+		"menu-mobile": "\ea03"
 	)
 ));
 

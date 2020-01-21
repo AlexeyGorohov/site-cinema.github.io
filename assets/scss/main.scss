@@ -7,8 +7,8 @@
 
 // 2. Vendors
 @import
-  '~rfs/scss',
-  '~css-reset-and-normalize-sass/scss/reset-and-normalize';
+'~sass-mediascreen/mediascreen',
+'~css-reset-and-normalize-sass/scss/reset-and-normalize';
 
 // 3. Base stuff
 @import
@@ -23,6 +23,7 @@
 
 // 5. Blocks
 @import
+  'blocks/address',
   'blocks/grid', 
   'blocks/button', 
   'blocks/header',

@@ -12,13 +12,13 @@
 
     .tab__discriptions {
       display: none;
-      font-size: vw(17px);
       line-height: 1.2;
       font-weight: 500;
+      @include resize-vw(font-size, 17, 10, 10);
     }
 
     .tab__day {
-      font-size: vw(28px);
+      @include resize-vw(font-size, 28, 15, 12);
     }
 
     .tab__item {
@@ -27,6 +27,7 @@
       padding-left: vw(25px);
       padding-right: vw(25px);
 
+      // Добавление класса .tab__item_active на активный элемент 
       &_active {
         color: $colorBlack;
         line-height: 1.2;
@@ -34,7 +35,7 @@
         .tab__day {
           font-weight: 500;
           color: $colorBlack;
-          font-size: vw(40px);
+          @include resize-vw(font-size, 40, 20, 18);
         }
 
         .tab__discriptions {
@@ -50,7 +51,7 @@
     .tab__day {
       color: rgba(60, 60, 67, .6);
       @include transition-default;
-      font-size: vw(24px);
+      @include resize-vw(font-size, 24, 13, 13);
     }
 
     .tab__item {

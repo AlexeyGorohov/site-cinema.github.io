@@ -23,13 +23,13 @@
       flex: 0 0 span(4);
       max-width: span(4);
 
-      @media (max-width: $bpTablet) {
+      @include device-media(tablet) {
         padding: 0 gutter();
         flex: 0 0 span(6);
         max-width: span(6);
       }
 
-      @media (max-width: $bpMobile) {
+      @include device-media(mobile) {
         padding: 0 gutter();
         flex: 0 0 span(12);
         max-width: span(12); 

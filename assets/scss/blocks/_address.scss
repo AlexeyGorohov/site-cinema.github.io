@@ -1,0 +1,32 @@
+.address {
+  display: flex;
+  align-items: center;
+  @include resize-vw(font-size, 24, 18, 18);
+
+  &__text {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    @include transition-default;
+
+    @include device-media(desktop) {
+      &:hover {
+        color: $colorMain;
+      }
+    }
+
+    @include device-media(tablet mobile) {
+      display: none;
+    }
+  }
+
+  &__icon {
+    color: $colorMain;
+    margin-right: vw(5px);
+
+    @include device-media(tablet mobile) {
+      margin-right: 0;
+    }
+  }
+}

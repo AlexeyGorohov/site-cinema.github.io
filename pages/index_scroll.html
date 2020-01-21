@@ -35,25 +35,29 @@
               </div>
             </div>
           </div>
-          <div class="header__info">
-            <div class="header__address">
-              <span class="header__icon icon icon_marker"></span>
-              Оренбург
+          <div class="header__address">
+            <div class="address">
+              <span class="address__icon icon icon_marker"></span>
+              <span class="address__text">Оренбург</span>
             </div>
-            <div class="header__menu">
-              <nav class="menu">
-                <div class="menu__button">
-                  <div class="button button_menu">Меню</div>
+          </div>
+          <div class="header__menu">
+            <nav class="menu">
+              <div class="menu__button">
+                <div class="button button_menu">
+                  <!-- menu-close-mobile.svg -->
+                  <img class="button__icon" src="../public/image/menu-mobile.svg" alt="Меню">
+                  <span class="button__text">Меню</span>
                 </div>
-                <ul hidden class="menu__list">
-                  <li>Расписание</li>
-                  <li>Личный кабинет</li>
-                  <li>Акции</li>
-                  <li>Местоположение</li>
-                  <li>Контакты</li>
-                </ul>
-              </nav>
-            </div>
+              </div>
+              <ul hidden class="menu__list">
+                <li>Расписание</li>
+                <li>Личный кабинет</li>
+                <li>Акции</li>
+                <li>Местоположение</li>
+                <li>Контакты</li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>
@@ -78,70 +82,17 @@
           <div class="tab__day">Календарь</div>
         </div>
       </div>
+
       <div class="section section_timetable">
         <div class="section__card">
-          <div class="card card_timetable">
-            <div class="card__poster" style="background-image: url(../public/image/poster.jpg);"></div>
-            <div class="card__content">
-              <div class="card__heading">Малефисента: Владычица тьмы и еще чего нибудь</div>
-              <div class="card__description">18+ приключения, ужасы, комедия, экшн</div>
-              <div class="card__cards">
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
+          <div class="card">
+            <div class="card__poster">
+              <div class="card__poster-image" style="background-image: url(../public/image/poster.jpg);"></div>
+            </div>
+            <div class="card__heading">Малефисента: Владычица тьмы и еще чего нибудь</div>
+            <div class="card__description">18+ приключения, ужасы, комедия, экшн</div>
+            <div class="card__timetable">
+              <div class="card__time-card">
                 <div class="time-card">
                   <div class="time-card__wrap">
                     <div class="time-card__time">00:00</div>
@@ -151,72 +102,89 @@
                   </div>
                 </div>
               </div>
+              <div class="card__time-card">
+                <div class="time-card">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">00:00</div>
+                    <div class="time-card__format">2D</div>
+                    <div class="time-card__price">540Р</div>
+                    <div class="time-card__hall">Комфорт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__time-card">
+                <div class="time-card">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">00:00</div>
+                    <div class="time-card__format">2D</div>
+                    <div class="time-card__price">540Р</div>
+                    <div class="time-card__hall">Комфорт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__time-card">
+                <div class="time-card">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">00:00</div>
+                    <div class="time-card__format">2D</div>
+                    <div class="time-card__price">540Р</div>
+                    <div class="time-card__hall">Комфорт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__time-card">
+                <div class="time-card">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">00:00</div>
+                    <div class="time-card__format">2D</div>
+                    <div class="time-card__price">540Р</div>
+                    <div class="time-card__hall">Комфорт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__time-card">
+                <div class="time-card">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">00:00</div>
+                    <div class="time-card__format">2D</div>
+                    <div class="time-card__price">540Р</div>
+                    <div class="time-card__hall">Комфорт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__time-card">
+                <div class="time-card">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">00:00</div>
+                    <div class="time-card__format">2D</div>
+                    <div class="time-card__price">540Р</div>
+                    <div class="time-card__hall">Комфорт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__time-card">
+                <div class="time-card time-card_all">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">&nbsp;</div>
+                    <div class="time-card__format">&nbsp;</div>
+                    <div class="time-card__all">Все</div>
+                    <div class="time-card__description">9 Сеансов</div>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="card__description card__description_mobile">18+, приключения, ужасы, комедия, экшн</div>
           </div>
         </div>
         <div class="section__card">
-          <div class="card card_timetable">
-            <div class="card__poster" style="background-image: url(../public/image/poster.jpg);"></div>
-            <div class="card__content">
-              <div class="card__heading">Малефисента: Владычица тьмы и еще чего нибудь</div>
-              <div class="card__description">18+ приключения, ужасы, комедия, экшн</div>
-              <div class="card__cards">
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
+          <div class="card">
+            <div class="card__poster">
+              <div class="card__poster-image" style="background-image: url(../public/image/poster.jpg);"></div>
+            </div>
+            <div class="card__heading">Малефисента: Владычица тьмы и еще чего нибудь</div>
+            <div class="card__description">18+ приключения, ужасы, комедия, экшн</div>
+            <div class="card__timetable">
+              <div class="card__time-card">
                 <div class="time-card">
                   <div class="time-card__wrap">
                     <div class="time-card__time">00:00</div>
@@ -226,72 +194,89 @@
                   </div>
                 </div>
               </div>
+              <div class="card__time-card">
+                <div class="time-card">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">00:00</div>
+                    <div class="time-card__format">2D</div>
+                    <div class="time-card__price">540Р</div>
+                    <div class="time-card__hall">Комфорт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__time-card">
+                <div class="time-card">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">00:00</div>
+                    <div class="time-card__format">2D</div>
+                    <div class="time-card__price">540Р</div>
+                    <div class="time-card__hall">Комфорт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__time-card">
+                <div class="time-card">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">00:00</div>
+                    <div class="time-card__format">2D</div>
+                    <div class="time-card__price">540Р</div>
+                    <div class="time-card__hall">Комфорт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__time-card">
+                <div class="time-card">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">00:00</div>
+                    <div class="time-card__format">2D</div>
+                    <div class="time-card__price">540Р</div>
+                    <div class="time-card__hall">Комфорт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__time-card">
+                <div class="time-card">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">00:00</div>
+                    <div class="time-card__format">2D</div>
+                    <div class="time-card__price">540Р</div>
+                    <div class="time-card__hall">Комфорт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__time-card">
+                <div class="time-card">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">00:00</div>
+                    <div class="time-card__format">2D</div>
+                    <div class="time-card__price">540Р</div>
+                    <div class="time-card__hall">Комфорт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__time-card">
+                <div class="time-card time-card_all">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">&nbsp;</div>
+                    <div class="time-card__format">&nbsp;</div>
+                    <div class="time-card__all">Все</div>
+                    <div class="time-card__description">9 Сеансов</div>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="card__description card__description_mobile">18+, приключения, ужасы, комедия, экшн</div>
           </div>
         </div>
         <div class="section__card">
-          <div class="card card_timetable">
-            <div class="card__poster" style="background-image: url(../public/image/poster.jpg);"></div>
-            <div class="card__content">
-              <div class="card__heading">Малефисента: Владычица тьмы и еще чего нибудь</div>
-              <div class="card__description">18+ приключения, ужасы, комедия, экшн</div>
-              <div class="card__cards">
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
+          <div class="card">
+            <div class="card__poster">
+              <div class="card__poster-image" style="background-image: url(../public/image/poster.jpg);"></div>
+            </div>
+            <div class="card__heading">Малефисента: Владычица тьмы и еще чего нибудь</div>
+            <div class="card__description">18+ приключения, ужасы, комедия, экшн</div>
+            <div class="card__timetable">
+              <div class="card__time-card">
                 <div class="time-card">
                   <div class="time-card__wrap">
                     <div class="time-card__time">00:00</div>
@@ -301,72 +286,89 @@
                   </div>
                 </div>
               </div>
+              <div class="card__time-card">
+                <div class="time-card">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">00:00</div>
+                    <div class="time-card__format">2D</div>
+                    <div class="time-card__price">540Р</div>
+                    <div class="time-card__hall">Комфорт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__time-card">
+                <div class="time-card">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">00:00</div>
+                    <div class="time-card__format">2D</div>
+                    <div class="time-card__price">540Р</div>
+                    <div class="time-card__hall">Комфорт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__time-card">
+                <div class="time-card">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">00:00</div>
+                    <div class="time-card__format">2D</div>
+                    <div class="time-card__price">540Р</div>
+                    <div class="time-card__hall">Комфорт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__time-card">
+                <div class="time-card">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">00:00</div>
+                    <div class="time-card__format">2D</div>
+                    <div class="time-card__price">540Р</div>
+                    <div class="time-card__hall">Комфорт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__time-card">
+                <div class="time-card">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">00:00</div>
+                    <div class="time-card__format">2D</div>
+                    <div class="time-card__price">540Р</div>
+                    <div class="time-card__hall">Комфорт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__time-card">
+                <div class="time-card">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">00:00</div>
+                    <div class="time-card__format">2D</div>
+                    <div class="time-card__price">540Р</div>
+                    <div class="time-card__hall">Комфорт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__time-card">
+                <div class="time-card time-card_all">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">&nbsp;</div>
+                    <div class="time-card__format">&nbsp;</div>
+                    <div class="time-card__all">Все</div>
+                    <div class="time-card__description">9 Сеансов</div>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="card__description card__description_mobile">18+, приключения, ужасы, комедия, экшн</div>
           </div>
         </div>
         <div class="section__card">
-          <div class="card card_timetable">
-            <div class="card__poster" style="background-image: url(../public/image/poster.jpg);"></div>
-            <div class="card__content">
-              <div class="card__heading">Малефисента: Владычица тьмы и еще чего нибудь</div>
-              <div class="card__description">18+ приключения, ужасы, комедия, экшн</div>
-              <div class="card__cards">
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
+          <div class="card">
+            <div class="card__poster">
+              <div class="card__poster-image" style="background-image: url(../public/image/poster.jpg);"></div>
+            </div>
+            <div class="card__heading">Малефисента: Владычица тьмы и еще чего нибудь</div>
+            <div class="card__description">18+ приключения, ужасы, комедия, экшн</div>
+            <div class="card__timetable">
+              <div class="card__time-card">
                 <div class="time-card">
                   <div class="time-card__wrap">
                     <div class="time-card__time">00:00</div>
@@ -376,72 +378,89 @@
                   </div>
                 </div>
               </div>
+              <div class="card__time-card">
+                <div class="time-card">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">00:00</div>
+                    <div class="time-card__format">2D</div>
+                    <div class="time-card__price">540Р</div>
+                    <div class="time-card__hall">Комфорт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__time-card">
+                <div class="time-card">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">00:00</div>
+                    <div class="time-card__format">2D</div>
+                    <div class="time-card__price">540Р</div>
+                    <div class="time-card__hall">Комфорт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__time-card">
+                <div class="time-card">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">00:00</div>
+                    <div class="time-card__format">2D</div>
+                    <div class="time-card__price">540Р</div>
+                    <div class="time-card__hall">Комфорт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__time-card">
+                <div class="time-card">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">00:00</div>
+                    <div class="time-card__format">2D</div>
+                    <div class="time-card__price">540Р</div>
+                    <div class="time-card__hall">Комфорт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__time-card">
+                <div class="time-card">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">00:00</div>
+                    <div class="time-card__format">2D</div>
+                    <div class="time-card__price">540Р</div>
+                    <div class="time-card__hall">Комфорт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__time-card">
+                <div class="time-card">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">00:00</div>
+                    <div class="time-card__format">2D</div>
+                    <div class="time-card__price">540Р</div>
+                    <div class="time-card__hall">Комфорт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__time-card">
+                <div class="time-card time-card_all">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">&nbsp;</div>
+                    <div class="time-card__format">&nbsp;</div>
+                    <div class="time-card__all">Все</div>
+                    <div class="time-card__description">9 Сеансов</div>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="card__description card__description_mobile">18+, приключения, ужасы, комедия, экшн</div>
           </div>
         </div>
         <div class="section__card">
-          <div class="card card_timetable">
-            <div class="card__poster" style="background-image: url(../public/image/poster.jpg);"></div>
-            <div class="card__content">
-              <div class="card__heading">Малефисента: Владычица тьмы и еще чего нибудь</div>
-              <div class="card__description">18+ приключения, ужасы, комедия, экшн</div>
-              <div class="card__cards">
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
+          <div class="card">
+            <div class="card__poster">
+              <div class="card__poster-image" style="background-image: url(../public/image/poster.jpg);"></div>
+            </div>
+            <div class="card__heading">Малефисента: Владычица тьмы и еще чего нибудь</div>
+            <div class="card__description">18+ приключения, ужасы, комедия, экшн</div>
+            <div class="card__timetable">
+              <div class="card__time-card">
                 <div class="time-card">
                   <div class="time-card__wrap">
                     <div class="time-card__time">00:00</div>
@@ -451,72 +470,7 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="section__card">
-          <div class="card card_timetable">
-            <div class="card__poster" style="background-image: url(../public/image/poster.jpg);"></div>
-            <div class="card__content">
-              <div class="card__heading">Малефисента: Владычица тьмы и еще чего нибудь</div>
-              <div class="card__description">18+ приключения, ужасы, комедия, экшн</div>
-              <div class="card__cards">
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
-                <div class="time-card">
-                  <div class="time-card__wrap">
-                    <div class="time-card__time">00:00</div>
-                    <div class="time-card__format">2D</div>
-                    <div class="time-card__price">540Р</div>
-                    <div class="time-card__hall">Комфорт</div>
-                  </div>
-                </div>
+              <div class="card__time-card">
                 <div class="time-card">
                   <div class="time-card__wrap">
                     <div class="time-card__time">00:00</div>
@@ -526,13 +480,79 @@
                   </div>
                 </div>
               </div>
+              <div class="card__time-card">
+                <div class="time-card">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">00:00</div>
+                    <div class="time-card__format">2D</div>
+                    <div class="time-card__price">540Р</div>
+                    <div class="time-card__hall">Комфорт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__time-card">
+                <div class="time-card">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">00:00</div>
+                    <div class="time-card__format">2D</div>
+                    <div class="time-card__price">540Р</div>
+                    <div class="time-card__hall">Комфорт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__time-card">
+                <div class="time-card">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">00:00</div>
+                    <div class="time-card__format">2D</div>
+                    <div class="time-card__price">540Р</div>
+                    <div class="time-card__hall">Комфорт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__time-card">
+                <div class="time-card">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">00:00</div>
+                    <div class="time-card__format">2D</div>
+                    <div class="time-card__price">540Р</div>
+                    <div class="time-card__hall">Комфорт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__time-card">
+                <div class="time-card">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">00:00</div>
+                    <div class="time-card__format">2D</div>
+                    <div class="time-card__price">540Р</div>
+                    <div class="time-card__hall">Комфорт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__time-card">
+                <div class="time-card time-card_all">
+                  <div class="time-card__wrap">
+                    <div class="time-card__time">&nbsp;</div>
+                    <div class="time-card__format">&nbsp;</div>
+                    <div class="time-card__all">Все</div>
+                    <div class="time-card__description">9 Сеансов</div>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="card__description card__description_mobile">18+, приключения, ужасы, комедия, экшн</div>
           </div>
         </div>
       </div>
-      <div class="section section_offers">
+    </div>
+
+    <div class="section section_offers">
+      <div class="container">
         <h2 class="section__heading">Акции</h2>
-        <div class="section__wrap">
+      </div>
+      <div class="section__container">
+        <div class="section__grid">
           <div class="section__card">
             <div class="offer-card">
               <div class="offer-card__image" style="background-image: url(../public/image/offer.jpg);"></div>

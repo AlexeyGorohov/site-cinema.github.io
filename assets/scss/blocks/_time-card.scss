@@ -4,6 +4,14 @@
   border-radius: vw(15px);
   display: inline-flex;
 
+  @include device-media(tablet) {
+    border-radius: vw(15px, $bpTabletMin);
+  }
+
+  @include device-media(mobile) {
+    border-radius: vw(15px, $bpMobileMin);
+  }
+
   &__wrap {
     cursor: pointer;
     transform: translateY(2px);
@@ -12,19 +20,46 @@
     padding-top: vw(12px);
     padding-bottom: vw(12px);
     padding-right: 2px;
-    padding-left: 5px;
+    padding-left: vw(10px);
     width: vw(100px);
     height: vw(100px);
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @include device-media(tablet) {
+      width: vw(85px, $bpTabletMin);
+      height: vw(85px, $bpTabletMin);
+      padding-top: vw(12px, $bpTabletMin);
+      padding-bottom: vw(12px, $bpTabletMin);
+      border-radius: vw(15px, $bpTabletMin);
+      padding-left: vw(10px, $bpTabletMin);
+    }
+
+    @include device-media(mobile) {
+      width: vw(85px, $bpMobileMin);
+      height: vw(85px, $bpMobileMin);
+      padding-top: vw(12px, $bpMobileMin);
+      padding-bottom: vw(12px, $bpMobileMin);
+      border-radius: vw(15px, $bpMobileMin);
+      padding-left: vw(10px, $bpMobileMin);
+    }
   }
 
   &__time {
+    line-height: 1;
     font-size: vw(24px);
     color: $colorBlack;
     font-weight: normal;
+
+    @include device-media(tablet) {
+      font-size: vw(20px, $bpTabletMin);
+    }
+
+    @include device-media(mobile) {
+      font-size: vw(23px, $bpMobileMin);
+    }
   }
 
   &__format {
@@ -34,6 +69,14 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+
+    @include device-media(tablet) {
+      font-size: vw(9px, $bpTabletMin);
+    }
+
+    @include device-media(mobile) {
+      font-size: vw(9px, $bpMobileMin);
+    }
   }
 
   &__price, &__all {
@@ -42,6 +85,16 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+
+    @include device-media(tablet) {
+      font-size: vw(16px, $bpTabletMin);
+      margin-top: vw(2px, $bpTabletMin);
+    }
+
+    @include device-media(mobile) {
+      font-size: vw(16px, $bpMobileMin);
+      margin-top: 0;
+    }
   }
 
   &__hall, &__description {
@@ -51,6 +104,14 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+
+    @include device-media(tablet) {
+      font-size: vw(10px, $bpTabletMin);
+    }
+
+    @include device-media(mobile) {
+      font-size: vw(10px, $bpMobileMin);
+    }
   }
 
   &_all {

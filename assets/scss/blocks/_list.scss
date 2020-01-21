@@ -1,14 +1,14 @@
 .list {
   &_footer {
-    margin-top: vw(25px);
+    @include resize-vw(margin-top, 25, 20, 15);
 
     .list__item {
       &:not(:last-of-type) {
-        margin-bottom: vw(25px);
+        @include resize-vw(margin-bottom, 25, 20, 15);
       }
 
       .link {
-        transition: color .3s ease;
+        @include transition-default;
         color: rgba(#fff, 0.5);
 
         &:hover {

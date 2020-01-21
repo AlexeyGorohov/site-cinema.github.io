@@ -1,117 +1,65 @@
 .time-card {
   box-shadow: 0px 1px 8px rgba($colorBlack, 0.15);
   background-color: $colorMain;
-  border-radius: vw(15px);
   display: inline-flex;
-
-  @include device-media(tablet) {
-    border-radius: vw(15px, $bpTabletMin);
-  }
-
-  @include device-media(mobile) {
-    border-radius: vw(15px, $bpMobileMin);
-  }
+  @include resize-vw(border-radius, 15, 12, 10);
 
   &__wrap {
     cursor: pointer;
     transform: translateY(2px);
-    border-radius: vw(15px);
     line-height: 1.18;
-    padding-top: vw(12px);
-    padding-bottom: vw(12px);
     padding-right: 2px;
-    padding-left: vw(10px);
-    width: vw(100px);
-    height: vw(100px);
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    @include device-media(tablet) {
-      width: vw(85px, $bpTabletMin);
-      height: vw(85px, $bpTabletMin);
-      padding-top: vw(12px, $bpTabletMin);
-      padding-bottom: vw(12px, $bpTabletMin);
-      border-radius: vw(15px, $bpTabletMin);
-      padding-left: vw(10px, $bpTabletMin);
-    }
-
-    @include device-media(mobile) {
-      width: vw(85px, $bpMobileMin);
-      height: vw(85px, $bpMobileMin);
-      padding-top: vw(12px, $bpMobileMin);
-      padding-bottom: vw(12px, $bpMobileMin);
-      border-radius: vw(15px, $bpMobileMin);
-      padding-left: vw(10px, $bpMobileMin);
-    }
+    @include resize-vw(padding-left, 10, 10, 10);
+    @include resize-vw(padding-top, 12, 12, 12);
+    @include resize-vw(padding-bottom, 12, 12, 12);
+    @include resize-vw(width, 100, 85, 82);
+    @include resize-vw(height, 100, 85, 82);
+    @include resize-vw(border-radius, 15, 12, 10);
   }
 
   &__time {
     line-height: 1;
-    font-size: vw(24px);
     color: $colorBlack;
     font-weight: normal;
-
-    @include device-media(tablet) {
-      font-size: vw(20px, $bpTabletMin);
-    }
-
-    @include device-media(mobile) {
-      font-size: vw(23px, $bpMobileMin);
-    }
+    @include resize-vw(font-size, 24, 20, 23);
   }
 
   &__format {
-    font-size: vw(11px);
     color: rgba($colorBlack, 0.5);
     text-transform: uppercase;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-
-    @include device-media(tablet) {
-      font-size: vw(9px, $bpTabletMin);
-    }
-
-    @include device-media(mobile) {
-      font-size: vw(9px, $bpMobileMin);
-    }
+    @include resize-vw(font-size, 11, 9, 9);
   }
 
   &__price, &__all {
-    font-size: vw(18px);
     color: $colorBlack;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    @include resize-vw(font-size, 18, 16, 16);
 
     @include device-media(tablet) {
-      font-size: vw(16px, $bpTabletMin);
       margin-top: vw(2px, $bpTabletMin);
     }
 
     @include device-media(mobile) {
-      font-size: vw(16px, $bpMobileMin);
       margin-top: 0;
     }
   }
 
   &__hall, &__description {
-    font-size: vw(13px);
     text-transform: uppercase;
     color: rgba($colorBlack, 0.5);
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-
-    @include device-media(tablet) {
-      font-size: vw(10px, $bpTabletMin);
-    }
-
-    @include device-media(mobile) {
-      font-size: vw(10px, $bpMobileMin);
-    }
+    @include resize-vw(font-size, 13, 10, 10);
   }
 
   &_all {

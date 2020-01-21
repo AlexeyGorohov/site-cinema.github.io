@@ -1,5 +1,5 @@
-$widthContainerDesktop: 1640px;
-$widthContainerTablet: 714px;
+$widthContainerDesktop: 1640;
+$widthContainerTablet: 714;
 
 $bpDesktopMax: 1920px;
 $bpDesktopMin: 1200px;
@@ -32,5 +32,10 @@ $ms-devices: (
   desktop-lg: (
     group: true,
     min: 1921px
-  )
+  ),
+  desktop: (
+    group: true, // group of devices
+    min: 1200px,
+    max: 1920px,
+),
 );

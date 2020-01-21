@@ -1,12 +1,11 @@
 .card {
   background-color: $colorWhite;
-  min-height: vw(405px);
+  @include resize-vw(min-height, 405);
+  @include resize-vw(padding-top, 10, 10, 20);
+  @include resize-vw(padding-bottom, 10, 10, 20);
+  @include resize-vw(padding-right, 20, 20, 10);
+  @include resize-vw(padding-left, 20, 20, 10);
   @include resize-vw(border-radius, 12, 12, 12);
-  padding: vw(10px) vw(20px) vw(20px);
-
-  @include device-media(mobile) {
-    padding: vw(20px, $bpMobileMin) vw(10px, $bpMobileMin);
-  }
 
   &::after {
     content: '';
@@ -24,19 +23,14 @@
   &__poster {
     float: left;
     position: relative;
-    max-width: vw(240px);
-    margin-bottom: vw(10px);
     width: 100%;
-
-    @include device-media(tablet) {
-      max-width: vw(216px, $bpTabletMin);
-    }
+    @include resize-vw(max-width, 225, 216, 184);
+    @include resize-vw(margin-bottom, 10, 10);
 
     @include device-media(mobile) {
       margin-bottom: 0;
-      max-width: vw(190px, $bpMobileMin);
-      margin-right: vw(10px, $bpMobileMin);
-      margin-left: vw(7px, $bpMobileMin);
+      margin-right: vw(14px, $bpMobileMin);
+      margin-left: vw(12px, $bpMobileMin);
     }
   }
 
@@ -62,9 +56,9 @@
 
   &__heading {
     font-weight: 500;
-    @include resize-vw(line-height, 25, 20, 20);
-    @include resize-vw(line-height, 30, 26, 26);
-    @include resize-vw(font-size, 28, 24, 24);
+    @include resize-vw(padding-top, 25, 20);
+    @include resize-vw(line-height, 30, 26);
+    @include resize-vw(font-size, 28, 24);
 
     @include device-media(mobile) {
       display: none;
@@ -74,9 +68,9 @@
   &__description {
     font-weight: normal;
     color: rgba($colorBlack, 0.5);
-    @include resize-vw(line-height, 25, 23, 21);
-    @include resize-vw(margin-top, 10, 10, 10);
-    @include resize-vw(font-size, 20, 18, 16);
+    @include resize-vw(line-height, 25, 23);
+    @include resize-vw(margin-top, 10, 10);
+    @include resize-vw(font-size, 20, 18);
 
     @include device-media(mobile) {
       display: none;
@@ -86,17 +80,19 @@
       display: none;
 
       @include device-media(mobile) {
-        padding: 0 vw(10px, $bpMobileMin);
+        padding: vw(20px, $bpMobileMin) vw(10px, $bpMobileMin) 0;
         display: block;
       }
     }
   }
 
   &__timetable {
-    display: flex;
-    flex-wrap: wrap;
-    margin: vw(10px) vw(-10px) vw(-10px);
+    // display: flex;
+    // flex-wrap: wrap;
     transform: translateX(vw(-10px));
+
+    @include resize-vw(margin-top, 10);
+    @include resize-vw(margin-bottom, -10);
 
     @include device-media(tablet) {
       margin: vw(10px, $bpTabletMin) vw(-10px, $bpTabletMin) vw(-10px, $bpTabletMin);
@@ -111,7 +107,7 @@
 
   &__time-card {
     display: inline-block;
-    padding: vw(10px);
+    @include resize-vw(padding, 10);
 
     @include device-media(tablet) {
       padding: vw(10px, $bpTabletMin);

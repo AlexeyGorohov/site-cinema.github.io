@@ -8,7 +8,8 @@
 
   &_main {
     align-items: center;
-    margin: 0 vw(-25px);
+    @include resize-vw(margin-left, -25, -10, -10);
+    @include resize-vw(margin-right, -25, -10, -10);
 
     .tab__discriptions {
       display: none;
@@ -18,14 +19,14 @@
     }
 
     .tab__day {
-      @include resize-vw(font-size, 28, 15, 12);
+      @include resize-vw(font-size, 28, 15, 14);
     }
 
     .tab__item {
       cursor: pointer;
       color: rgba(60, 60, 67, 0.6);
-      padding-left: vw(25px);
-      padding-right: vw(25px);
+      @include resize-vw(padding-left, 25, 10, 10);
+      @include resize-vw(padding-right, 25, 10, 10);
 
       // Добавление класса .tab__item_active на активный элемент 
       &_active {
@@ -55,13 +56,13 @@
     }
 
     .tab__item {
-      padding-left: vw(15px);
-      padding-right: vw(15px);
+      @include resize-vw(padding-left, 15, 10, 10);
+      @include resize-vw(padding-right, 15, 10, 10);
 
       &_active {
         .tab__day {
-          color: rgba($colorBlack, 0.9);
           font-weight: 500;
+          color: rgba($colorBlack, 0.9);
         }
       }
     }

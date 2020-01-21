@@ -28,7 +28,7 @@
   }
 
   &__menu {
-    @include device-media(desktop laptop tablet) {
+    @include device-media(desktop-lg desktop laptop tablet) {
       padding: 0 gutter() 0 0;
     }
   }

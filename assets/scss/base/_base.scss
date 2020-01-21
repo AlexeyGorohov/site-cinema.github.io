@@ -13,7 +13,7 @@ body, html {
   -webkit-text-size-adjust: 100%;
   font-family: $fontBase;
   line-height: 1.3;
-  @include resize-vw(font-size, 16, 15, 14);
+  @include resize-vw(font-size, 19, 16, 16);
 }
 
 body {

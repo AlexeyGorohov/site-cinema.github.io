@@ -1,16 +1,17 @@
 .banner {
   color: #ffffff;
-  @include resize-vw(min-height, 600, 320, 228);
   display: flex;
   background: linear-gradient(
-      90deg,
-      #000000 0%,
-      rgba(0, 0, 0, 0) 33.33%,
-      rgba(0, 0, 0, 0) 67.19%,
-      #000000 100%
+    90deg,
+    #000000 0%,
+    rgba(0, 0, 0, 0) 33.33%,
+    rgba(0, 0, 0, 0) 67.19%,
+    #000000 100%
     ),
     linear-gradient(180deg, rgba(0, 0, 0, 0.8) -0.08%, rgba(0, 0, 0, 0) 100%);
-  @include transition-default;
+    @include transition-default;
+    
+  @include resize-vw(min-height, 600, 320, 228);
 
   padding-top: 100px;
   @include device-media(laptop tablet) {
@@ -21,18 +22,18 @@
   }
 
   &__container {
-    @extend .container;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    @extend .container;
   }
 
   &__cards {
+    display: flex;
+    flex-wrap: wrap;
     @include resize-vw(margin-top, 20, 20, 20);
     @include resize-vw(margin-left, -10, -10, -10);
     @include resize-vw(margin-right, -10, -10, -10);
-    display: flex;
-    flex-wrap: wrap;
 
     .time-card {
       @include resize-vw(margin, 10, 10, 10);
@@ -51,9 +52,9 @@
   }
 
   &_header {
-    position: relative;
     display: flex;
-    padding-bottom: vw(60px);
+    position: relative;
+    @include resize-vw(padding-bottom, 60, 40, 30);
   }
 
   &_detail {
@@ -78,33 +79,27 @@
     .banner__image {
       @extend .mx-border-radius;
       align-self: flex-start;
-      min-width: vw(230px);
 
       &::before {
         content: '';
         display: block;
         padding-bottom: calc(345 / 230 * 100%);
-      }
 
-      @include device-media(tablet) {
-        min-width: vw(157px, $bpTabletMin);
-
-        &::before {
+        @include device-media(tablet) {
           padding-bottom: calc(230 / 157 * 100%);
         }
-      }
 
-      @include device-media(mobile) {
-        min-width: vw(112px, $bpMobileMin);
-
-        &::before {
+        @include device-media(mobile) {
           padding-bottom: calc(168 / 112 * 100%);
         }
       }
+
+      @include resize-vw(min-width, 230, 157, 112);
     }
 
     .banner__description {
-      padding: vw(20px) 0 vw(30px);
+      @include resize-vw(padding-top, 20);
+      @include resize-vw(padding-bottom, 30);
 
       @include device-media(tablet mobile) {
         display: none;
@@ -186,7 +181,7 @@
     }
 
     .banner__linecount {
-      margin-bottom: vw(10px);
+      @include resize-vw(margin-bottom, 10, 10, 10);
       @include resize-vw(font-size, 19, 16, 16);
       line-height: 1.6;
     }
@@ -203,6 +198,10 @@
 
       .banner__linecount {
         @include linecount(3, 1.6);
+
+        @include device-media(laptop) {
+          @include linecount(2, 1.4);
+        }
       }
 
       .banner__row {

@@ -1,13 +1,11 @@
 .container {
-  max-width: vw($widthContainerDesktop);
+  // max-width: vw($widthContainerDesktop * 1px);
   margin-left: auto;
   margin-right: auto;
   padding: 0 gutter();
   width: 100%;
 
-  @include device-media(tablet) {
-    max-width: vw($widthContainerTablet, $bpTabletMin);
-  }
+  @include resize-vw(max-width, $widthContainerDesktop, $widthContainerTablet);
 
   @include device-media(mobile) {
     padding: 0 20px;

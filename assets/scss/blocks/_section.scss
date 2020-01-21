@@ -7,13 +7,25 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: vw(25px) vw(-20px) vw(-25px);
+    @include resize-vw(margin-top, 25);
+    @include resize-vw(margin-bottom, -25);
+    @include resize-vw(margin-left, -20);
+    @include resize-vw(margin-right, -20);
 
     .section__card {
       display: flex;
       max-width: 50%;
       flex: 0 0 50%;
-      padding: vw(25px) vw(20px);
+      @include resize-vw(padding-top, 25);
+      @include resize-vw(padding-bottom, 25);
+      @include resize-vw(padding-left, 20);
+      @include resize-vw(padding-right, 20);
+    }
+
+    .card__poster {
+      @include device-media(laptop) {
+        max-width: vw(135px, $bpLaptopMax);
+      }  
     }
 
     @include device-media(tablet mobile) {
@@ -82,8 +94,8 @@
     .section__cards {
       display: flex;
       flex-wrap: wrap;
-      margin-left: vw(-10px);
-      margin-right: vw(-10px);
+      @include resize-vw(margin-left, -10, -10);
+      @include resize-vw(margin-right, -10, -10);
 
       @include device-media(mobile) {
         margin: 0;
@@ -94,7 +106,7 @@
     }
 
     .section__card {
-      padding: vw(10px);
+      @include resize-vw(padding, 10, 10);
 
       @include device-media(mobile) {
         padding: vw(10px, $bpMobileMin);
@@ -146,9 +158,9 @@
   &_contact {
     .section__heading {
       font-weight: 500;
-      @include resize-vw(padding-bottom, 20, 15, 15);
-      @include resize-vw(font-size, 30, 25, 20);
       border-bottom: 1px solid #acacac;
+      @include resize-vw(font-size, 30, 25, 20);
+      @include resize-vw(padding-bottom, 20, 15, 15);
     }
   }
 }
